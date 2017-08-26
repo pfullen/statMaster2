@@ -1,5 +1,32 @@
 <h1>  Stats </h1>
 
-<%= @response
- %>
+<div class = "container">
+<div class = "row">
+<table class="table table-striped">
+<thead>
+  <tr>
+	<th> Team Name </th>
+	<th> Team ID   </th>
+	<th> Market  </th>
+  </tr>
+</thead>
+<tbody>
+<% @response.each do |response| %>
+
+<tr>
+<td> <%= response['name'] %> </td>
+
+<td>  <%= response['id'] %> </td>
+<td>  <%= response['market'] %> </td>
+</tr>
+<% end %>
+</tbody> 
+</table>
+<br>
+<br>
+</div>
+ </div>
+ 
+
+
 
