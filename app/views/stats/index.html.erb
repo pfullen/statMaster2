@@ -1,5 +1,7 @@
 <h1>  Stats </h1>
 
+
+
 <div class = "container">
 <div class = "row">
 <table class="table table-striped">
@@ -11,22 +13,70 @@
   </tr>
 </thead>
 <tbody>
-<% @response.each do |response| %>
+<% @teams.each do |team| %>
 
 <tr>
-<td> <%= response['name'] %> </td>
+<td> <%= team['name'] %> </td>
 
-<td>  <%= response['id'] %> </td>
-<td>  <%= response['market'] %> </td>
+<td>  <%= team['id'] %> </td>
+<td>  <%= team['market'] %> </td>
 </tr>
 <% end %>
 </tbody> 
 </table>
 <br>
 <br>
+
+<br>
+<br>
+<br>
+<% @teams2.each do |team| %>
+<%= team['name'] %>
+<br>
+
+	
+
+
+
+
+
+
+<% @positions.each do |positions| %> 
+
+				<br>	   
+			
+					  <%= positions['name'] %> 
+					  <div class = "container">
+<div class = "row">
+<table class="table table-striped">
+<thead>
+  <tr>
+	<th> Last Name </th>
+	<th> First Name   </th>
+	<th> ID  </th>
+  </tr>
+</thead>
+<tbody>
+			    <br> 
+			         <% positions['players'].each do |p| %>
+			         <tr>
+		<td><%= p['last_name'] %>   </td>
+		<td>  <%= p['first_name'] %>  </td>
+		<td>  <%= p['id'] %>   </td>
+			    		</tr>	
+			    			<% end %>  
+			    <br>
+<br>
+</tbody>
+			<% end %> 
+</tr>
+<% end %>
+
+
 </div>
  </div>
- 
+
+
 
 
 
